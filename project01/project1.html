@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: 'Pretendard-Regular';
+    }
+    header{
+      background-color: #F2E9D8;
+      padding: 31px 300px 0px 300px;
+    }
+    footer{
+      background-color: teal;
+      padding: 20px;
+    }
+    main{
+      flex-grow: 5;
+    }
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* 추가된 부분 */
+      align-items: center; /* 수직 정렬 */
+      font-size: 16px;
+    }
+    li{
+      list-style: none; /*앞에 기호 없애기*/
+      float: left;
+      margin-right: 20px;
+    }
+    article{
+      display: flex;
+      align-items: center;
+    }
+    .bbb1{
+      width: 140px;
+      height: 50px;
+      background-color: #D97652;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      margin-left: 49px;
+    }
+    .bbb2{
+      width: 140px;
+      height: 50px;
+      background-color: #D97652;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      margin-top: 40px;
+    }
+    .ppp{
+      padding-top: 200px;
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    .fs {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    .cs1{
+      padding-top: 40px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .cs2{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .cs3{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* 추가된 부분 */
+    }
+    .cs4{
+      padding-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a><img src="img.png"></a>
+    <article>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Support</a></li>
+      </ul>
+      <button class="bbb1"><a href=""><b>Download</b></a></button>
+    </article>
+  </nav>
+  <div class="cs3">
+    <div>
+      <p class="ppp"><strong>Lorem Ipsum is simple</strong></p>
+      <p class="fs"><strong>dummy text of the printing and</strong></p>
+      <p class="cs1">Lorem Ipsum is simply dummy text of the printing and</p>
+      <p class="cs2">typesetting industry.</p>
+      <p class="cs2">Lorem Ipsum has been the industry's standard dummy text</p>
+      <p class="cs2">ever since the 1500s, when an unknown</p>
+      <button class="bbb2"><a href=""><b>Download</b></a></button>
+    </div>
+    <img class="cs4" src="img_1.png">
+  </div>
+</header>
+<main>
+  
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
