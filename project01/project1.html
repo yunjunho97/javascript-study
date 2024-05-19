@@ -216,8 +216,9 @@
     .sub{
       width: 1280px;
       height: 201px;
-      position: relative;
-      top: 100px;
+      /*position: relative;*/
+      position: absolute;
+      top: 3000px;
       z-index: 1;
       background-color: #263140;
       border-radius: 30px;
@@ -245,6 +246,12 @@
       border-radius: 60px;
       margin-right: 58px;
       position: relative;
+      background-image:url("img_8.png");
+      background-repeat: no-repeat;
+      background-position: 28px, center;
+      padding-left: 68px;
+      color: #767676;
+      font-size: 16px;
     }
     .cs28{
       position: absolute;
@@ -259,6 +266,9 @@
       color: white;
       font-size: 16px;
       border: none;
+    }
+    input::placeholder {
+      color: #767676;
     }
   </style>
 </head>
@@ -325,7 +335,7 @@
       <p class="cs26">Lorem Ipsum has been the industry's standard dummy text </p>
     </div>
     <div>
-      <input class="cs27" type="email" placeholder="">
+      <input class="cs27" type="email" placeholder="Enter your e-mail address">
       <button class="cs28">Subscribe</button>
     </div>
   </div>
