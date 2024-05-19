@@ -213,6 +213,53 @@
       width: 42px;
       height: 42px;
     }
+    .sub{
+      width: 1280px;
+      height: 201px;
+      position: relative;
+      top: 100px;
+      z-index: 1;
+      background-color: #263140;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* 추가된 부분 */
+      align-items: center; /* 수직 정렬 */
+    }
+    .cs25{
+      color: white;
+      font-size: 36px;
+      line-height: 45px;
+      margin-left: 58px;
+      margin-bottom: 18px;
+    }
+    .cs26{
+      color: white;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 58px;
+    }
+    .cs27{
+      width: 530px;
+      height: 60px;
+      border-radius: 60px;
+      margin-right: 58px;
+      position: relative;
+    }
+    .cs28{
+      position: absolute;
+      width: 135px;
+      height: 50px;
+      top: 0;
+      bottom: 0;
+      right: 64px;
+      margin: auto 0;
+      border-radius: 40px;
+      background-color: #D97652;
+      color: white;
+      font-size: 16px;
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -271,6 +318,17 @@
   <p class="cs19"><strong>Where you'll be</strong></p>
   <p class="cs20">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
   <p>지도</p>
+  <div class="sub">
+    <div>
+      <p class="cs25">Subscribe to our Blog post</p>
+      <p class="cs26">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p class="cs26">Lorem Ipsum has been the industry's standard dummy text </p>
+    </div>
+    <div>
+      <input class="cs27" type="email" placeholder="">
+      <button class="cs28">Subscribe</button>
+    </div>
+  </div>
 </main>
 <footer>
   <img class="cs21" src="img_2.png">
