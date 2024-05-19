@@ -26,11 +26,11 @@
       padding: 31px 300px 0px 300px;
     }
     footer{
-      background-color: teal;
-      padding: 20px;
+      padding: 0;
     }
     main{
       flex-grow: 5;
+      padding: 31px 300px 0px 300px;
     }
     nav{
       display: flex;
@@ -94,6 +94,125 @@
     .cs4{
       padding-bottom: 0;
     }
+    .cs5{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* 추가된 부분 */
+      padding-top: 80px;
+    }
+    .image-container {
+      width: 660px; /* 원하는 너비 */
+      height: 390px; /* 원하는 높이 */
+      border-radius: 30px;
+    }
+    .cs6{
+      font-size: 36px;
+      line-height: 45px;
+      padding-top: 92px;
+    }
+    .cs7{
+      font-size: 36px;
+      line-height: 45px;
+    }
+    .cs8{
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 30px;
+    }
+    .cs9{
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* 추가된 부분 */
+      padding-top: 120px;
+      font-size: 48px;
+      line-height: 60px;
+      color: #D97652;
+    }
+    .cs10{
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* 추가된 부분 */
+      padding-top: 40px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .cs11{
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* 추가된 부분 */
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .cs12{
+      color: #D97652;
+    }
+    .cs13{
+      width: 378px;
+      height: 378px;
+      border-radius: 30px;
+    }
+    .cs14{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 88px;
+    }
+    .cs15{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    .cs16{
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 100px;
+    }
+    .bbb3{
+      width: 143px;
+      height: 50px;
+      background-color: #D97652;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      margin-top: 28px;
+    }
+    .cs17{
+      display: flex;
+      justify-content: center;
+    }
+    .cs18{
+      border-color: #C4C4C4;
+      margin-top: 80px;
+    }
+    .cs19{
+      font-size: 36px;
+      line-height: 45px;
+      margin-top: 68px;
+    }
+    .cs20{
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    .cs21{
+      width: 100%;
+      margin-top: 181px;
+    }
+    .cs22{
+      padding-left: 300px;
+      padding-right: 300px;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+    .cs23{
+      width: 226px;
+      height: 70px;
+    }
+    .cs24{
+      width: 42px;
+      height: 42px;
+    }
   </style>
 </head>
 <body>
@@ -123,10 +242,47 @@
   </div>
 </header>
 <main>
-  
+  <div class="cs5">
+    <img class="image-container" src="img_2.jpeg">
+    <div>
+      <p class="cs6"><strong>Lorem Ipsum is simply</strong></p>
+      <p class="cs7"><strong>dummy text of the printing</strong></p>
+      <p class="cs7"><strong>and dummy text</strong></p>
+      <p class="cs8">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+      <p class="cs2">industry.</p>
+    </div>
+  </div>
+  <p class="cs9">dummy text of the printing and dummy</p>
+  <p class="cs10">Lorem Ipsum is simply&nbsp;<span class="cs12">dummy text </span>&nbsp;of the printing and typesetting industry.<p>
+  <p class="cs11">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+  <ul class="cs14">
+    <li><img class="cs13" src="img_3.jpeg"></li>
+    <li><img class="cs13" src="img_4.jpeg"></li>
+    <li><img class="cs13" src="img_5.jpeg"></li>
+  </ul>
+  <ul class="cs15">
+    <li><img class="cs13" src="img_6.jpeg"></li>
+    <li><img class="cs13" src="img_7.jpeg"></li>
+    <li><img class="cs13" src="img_8.jpeg"></li>
+  </ul>
+  <p class="cs16"><strong>Continue exploring HODU</strong></p>
+  <div class="cs17"><button class="bbb3">Show more</button></div>
+  <hr class="cs18">
+  <p class="cs19"><strong>Where you'll be</strong></p>
+  <p class="cs20">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+  <p>지도</p>
 </main>
 <footer>
-
+  <img class="cs21" src="img_2.png">
+  <nav class="cs22">
+    <a href=""><img class="cs23" src="img_3.png"></a>
+    <ul>
+      <li><a href=""><img class="cs24" src="img_4.png"></a></li>
+      <li><a href=""><img class="cs24" src="img_5.png"></a></li>
+      <li><a href=""><img class="cs24" src="img_6.png"></a></li>
+      <li><a href="http://www.naver.com"><img class="cs24" src="img_7.png"></a></li>
+    </ul>
+  </nav>
 </footer>
 </body>
 </html>
