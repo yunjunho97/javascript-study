@@ -216,13 +216,17 @@
       /*position: relative;*/
     }
     .cs210{
-      position: fixed;
+      position: sticky;
+      /*position: fixed;*/
       width: 50px;
       height: 50px;
-      bottom: 70px;
+      /*bottom: 70px;*/
       top: 78%;
       left: 96%;
       margin: 0;
+    }
+    .cs210:hover{
+      cursor: pointer;
     }
     .cs22{
       /*padding-left: 300px;*/
@@ -244,7 +248,8 @@
       height: 201px;
       /*position: relative;*/
       position: absolute;
-      top: 3000px;
+      /*top: 3000px;*/
+      top: 3050px;
       z-index: 1;
       background-color: #263140;
       border-radius: 30px;
@@ -272,7 +277,7 @@
       border-radius: 60px;
       margin-right: 58px;
       position: relative;
-      background-image:url("img_8.png");
+      background-image:url("images/img_8.png");
       background-repeat: no-repeat;
       background-position: 28px, center;
       padding-left: 68px;
@@ -311,7 +316,7 @@
       width: 600px;
       height: 400px;
       overflow: auto;
-      background-image: url("img_10.png");
+      background-image: url("images/img_10.png");
       flex-direction: column; /* 세로 방향으로 정렬 */
       align-items: center; /* 가로 방향 중앙 정렬 */
     }
@@ -393,6 +398,15 @@
       span2.onclick = function () {
         modal2.style.display = "none";
       }
+
+      const scroll = document.getElementById('scroll');
+
+      scroll.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
       // window.onclick = function (event) {
       //   if (event.target === modal) {
       //     modal.style.display = "none";
@@ -404,7 +418,7 @@
 <body>
 <header>
   <nav>
-    <a><img src="img.png" alt="HODU 로고"></a>
+    <a><img src="images/img.png" alt="HODU 로고"></a>
     <div class="cs0">
       <ul>
         <li><a href="">home</a></li>
@@ -425,13 +439,13 @@
       <p class="cs2">ever since the 1500s, when an unknown</p>
       <button class="bbb2"><b>Download</b></button>
     </section>
-    <img class="cs4" src="img_1.png" alt="관련된 사진">
+    <img class="cs4" src="images/img_1.png" alt="관련된 사진">
   </article>
 </header>
 <main>
   <article class="cs5">
     <h2 hidden="hidden">article제목</h2>
-    <img class="image-container" src="img_2.jpeg" alt="관련된 사진">
+    <img class="image-container" src="images/img_2.jpeg" alt="관련된 사진">
     <section>
       <h3 class="cs6"><strong>Lorem Ipsum is simply</strong></h3>
       <p class="cs7"><strong>dummy text of the printing</strong></p>
@@ -445,14 +459,14 @@
     <p class="cs10">Lorem Ipsum is simply&nbsp;<span class="cs12">dummy text </span>&nbsp;of the printing and typesetting industry.<p>
     <p class="cs11">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
     <ul class="cs14">
-      <li><img class="cs13" src="img_3.jpeg" alt=""></li>
-      <li><img class="cs13" src="img_4.jpeg" alt=""></li>
-      <li><img class="cs13" src="img_5.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_3.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_4.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_5.jpeg" alt=""></li>
     </ul>
     <ul class="cs15">
-      <li><img class="cs13" src="img_6.jpeg" alt=""></li>
-      <li><img class="cs13" src="img_7.jpeg" alt=""></li>
-      <li><img class="cs13" src="img_8.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_6.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_7.jpeg" alt=""></li>
+      <li><img class="cs13" src="images/img_8.jpeg" alt=""></li>
     </ul>
     <p class="cs16"><strong>Continue exploring HODU</strong></p>
     <button class="bbb3">Show more</button>
@@ -477,7 +491,7 @@
   </section>
   <section class="modal" id="modal">
     <h2 hidden="hidden">구독 완료</h2>
-    <img class="cs29" src="img_11.png" alt="">
+    <img class="cs29" src="images/img_11.png" alt="">
     <p class="cs30">Thank you!</p>
     <p class="cs31">Lorem Ipsum is simply dummy text of the printing industry.</p>
     <p id="modalText"></p>
@@ -485,7 +499,7 @@
   </section>
   <section class="modal" id="modal2">
     <h2 hidden="hidden">구독 실패</h2>
-    <img class="cs29" src="img_11.png" alt="">
+    <img class="cs29" src="images/img_11.png" alt="">
     <p class="cs30">구독 실패</p>
     <p class="cs31">Lorem Ipsum is simply dummy text of the printing industry.</p>
     <p id="modalText2"></p>
@@ -493,15 +507,16 @@
   </section>
 </main>
 <footer>
-  <img class="cs21" src="img_2.png" alt="">
-  <img class="cs210" src="img_9.png" alt="">
+  <img id="scroll" class="cs210" src="images/img_12.png" alt="">
+  <img class="cs21" src="images/img_2.png" alt="">
+<!--  <img class="cs210" src="img_9.png" alt="">-->
   <nav class="cs22">
-    <a href=""><img class="cs23" src="img_3.png" alt=""></a>
+    <a href=""><img class="cs23" src="images/img_3.png" alt=""></a>
     <ul>
-      <li><a href=""><img class="cs24" src="img_4.png" alt=""></a></li>
-      <li><a href=""><img class="cs24" src="img_5.png" alt=""></a></li>
-      <li><a href=""><img class="cs24" src="img_6.png" alt=""></a></li>
-      <li><a href="https://www.naver.com"><img class="cs24" src="img_7.png" alt=""></a></li>
+      <li><a href=""><img class="cs24" src="images/img_4.png" alt=""></a></li>
+      <li><a href=""><img class="cs24" src="images/img_5.png" alt=""></a></li>
+      <li><a href=""><img class="cs24" src="images/img_6.png" alt=""></a></li>
+      <li><a href="https://www.naver.com"><img class="cs24" src="images/img_7.png" alt=""></a></li>
     </ul>
   </nav>
 </footer>
