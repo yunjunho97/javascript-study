@@ -10,6 +10,7 @@
       box-sizing: border-box;
     }
 
+    /*header main cs22*/
     @font-face {
       font-family: 'Pretendard-Regular';
       src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -25,6 +26,7 @@
     header{
       background-color: #F2E9D8;
       padding: 31px 300px 0 300px;
+      /*padding: 31px 100px 0 100px;*/
     }
     footer{
       padding: 0;
@@ -32,6 +34,7 @@
     main{
       flex-grow: 5;
       padding: 31px 300px 0 300px;
+      /*padding: 31px 100px 0 100px;*/
     }
     nav{
       display: flex;
@@ -229,11 +232,8 @@
       cursor: pointer;
     }
     .cs22{
-      /*padding-left: 300px;*/
-      /*padding-right: 300px;*/
-      /*padding-top: 45px;*/
-      /*padding-bottom: 45px;*/
       padding: 45px 300px;
+      /*padding: 45px 100px;*/
     }
     .cs23{
       width: 226px;
@@ -248,6 +248,8 @@
       height: 201px;
       /*position: relative;*/
       position: absolute;
+      left: 50%;
+      transform: translate(-50%);
       /*top: 3000px;*/
       top: 3050px;
       z-index: 1;
@@ -363,6 +365,33 @@
       color: white;
       font-size: 16px;
       line-height: 20px;
+    }
+    /*노트북보다 큰 모니터 가정: 화면크기 7~80퍼센트로 줄이고 확인*/
+    /*노트북: 100%기본화면*/
+    /*태블릿: 가로로 더 줄여서 확인*/
+    /*1500*/
+    @media (max-width: 1650px) {
+      header, main, .cs22 {
+        padding: 31px 100px 0 100px;
+      }
+    }
+    /*태블릿 100% 화면*/
+    @media (max-width: 1300px) {
+      header, main, .cs22 {
+        padding: 31px 50px 0 50px;
+      }
+      .image-container{
+        width: 518px;
+        height: 312px;
+      }
+      .cs13{
+        width: 330px;
+        height: 330px;
+      }
+      .sub{
+        width: 1100px;
+        top: 2900px;
+      }
     }
   </style>
   <script>
