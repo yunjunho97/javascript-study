@@ -10,7 +10,6 @@
       box-sizing: border-box;
     }
 
-    /*header main cs22*/
     @font-face {
       font-family: 'Pretendard-Regular';
       src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -26,7 +25,6 @@
     header{
       background-color: #F2E9D8;
       padding: 31px 300px 0 300px;
-      /*padding: 31px 100px 0 100px;*/
     }
     footer{
       padding: 0;
@@ -34,17 +32,16 @@
     main{
       flex-grow: 5;
       padding: 31px 300px 0 300px;
-      /*padding: 31px 100px 0 100px;*/
     }
     nav{
       display: flex;
       flex-direction: row;
-      justify-content: space-between; /* 추가된 부분 */
-      align-items: center; /* 수직 정렬 */
+      justify-content: space-between;
+      align-items: center;
       font-size: 16px;
     }
     li{
-      list-style: none; /*앞에 기호 없애기*/
+      list-style: none;
       float: left;
       margin-right: 20px;
     }
@@ -54,211 +51,175 @@
     a:visited{
       color: black;
     }
-    /*article{*/
-    /*  display: flex;*/
-    /*  align-items: center;*/
-    /*}*/
-    .cs0{
+
+    .nav-aline{
       display: flex;
       align-items: center;
     }
-    .bbb1{
+    .btn{
       width: 140px;
       height: 50px;
       background-color: #D97652;
       color: white;
       border: none;
       border-radius: 40px;
+      font-size: 16px;
+    }
+    .btn-nav{
       margin-left: 49px;
     }
-    .bbb2{
-      width: 140px;
-      height: 50px;
-      background-color: #D97652;
-      color: white;
-      border: none;
-      border-radius: 40px;
+    .btn-header{
       margin-top: 40px;
     }
-    .ppp{
+    .btn-main{
+      width: 143px;
+      margin-top: 28px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    .font-style-48-60{
+      font-size: 48px;
+      line-height: 60px;
+    }
+    .font-style-36-45{
+      font-size: 36px;
+      line-height: 45px;
+    }
+    .font-style-16-20{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .padding-top200{
       padding-top: 200px;
-      font-size: 48px;
-      line-height: 60px;
     }
-
-    .fs {
-      font-size: 48px;
-      line-height: 60px;
+    .padding-top92{
+      padding-top: 92px;
     }
-
-    .cs1{
-      padding-top: 40px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-    .cs2{
-      font-size: 16px;
-      line-height: 20px;
-    }
-    .cs3{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; /* 추가된 부분 */
-    }
-    .cs4{
-      padding-bottom: 0;
-    }
-    .cs5{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; /* 추가된 부분 */
+    .padding-top80{
       padding-top: 80px;
     }
+    .padding-top40{
+      padding-top: 40px;
+    }
+    .padding-top30{
+      padding-top: 30px;
+    }
+    .padding-bottom0{
+      padding-bottom: 0;
+    }
+
+    .article{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     .image-container {
       width: 660px; /* 원하는 너비 */
       height: 390px; /* 원하는 높이 */
       border-radius: 30px;
     }
-    .cs6{
-      font-size: 36px;
-      line-height: 45px;
-      padding-top: 92px;
-    }
-    .cs7{
-      font-size: 36px;
-      line-height: 45px;
-    }
-    .cs8{
-      font-size: 16px;
-      line-height: 20px;
-      padding-top: 30px;
-    }
-    .cs9{
+    .content{
       display: flex;
       flex-direction: row;
-      justify-content: center; /* 추가된 부분 */
+      justify-content: center;
+    }
+    .content-title{
       padding-top: 120px;
       font-size: 48px;
       line-height: 60px;
       color: #D97652;
     }
-    .cs10{
-      display: flex;
-      flex-direction: row;
-      justify-content: center; /* 추가된 부분 */
+    .content-sub1{
       padding-top: 40px;
       font-size: 16px;
       line-height: 20px;
     }
-    .cs11{
-      display: flex;
-      flex-direction: row;
-      justify-content: center; /* 추가된 부분 */
+    .content-sub2{
       font-size: 16px;
       line-height: 20px;
     }
-    .cs12{
-      color: #D97652;
-    }
-    .cs13{
-      width: 378px;
-      height: 378px;
-      border-radius: 30px;
-    }
-    .cs14{
-      display: flex;
-      justify-content: space-between;
-      margin-top: 88px;
-    }
-    .cs15{
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-    .cs16{
-      display: flex;
-      justify-content: center;
+    .content-sub3{
       font-size: 24px;
       line-height: 30px;
       margin-top: 100px;
     }
-    .bbb3{
-      width: 143px;
-      height: 50px;
-      background-color: #D97652;
-      color: white;
-      border: none;
-      border-radius: 40px;
-      margin-top: 28px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      /*margin: 0 auto;*/
+    .highlight{
+      color: #D97652;
     }
-    /*.cs17{*/
-    /*  display: flex;*/
-    /*  justify-content: center;*/
-    /*}*/
-    .cs18{
+
+    .main-image-box{
+      width: 378px;
+      height: 378px;
+      border-radius: 30px;
+    }
+    .main-image-list{
+      display: flex;
+      justify-content: space-between;
+    }
+    .list-margin88{
+      margin-top: 88px;
+    }
+    .list-margin40{
+      margin-top: 40px;
+    }
+    .line{
       border-color: #C4C4C4;
       margin-top: 80px;
     }
-    .cs19{
+    .map-title{
       font-size: 36px;
       line-height: 45px;
       margin-top: 68px;
     }
-    .cs20{
+    .map-sub{
       font-size: 16px;
       line-height: 20px;
       margin-top: 20px;
     }
-    .cs21{
+    .footer-image{
       width: 100%;
       margin-top: 181px;
-      /*position: relative;*/
     }
-    .cs210{
+    .scroll-img{
       position: sticky;
-      /*position: fixed;*/
       width: 50px;
       height: 50px;
-      /*bottom: 70px;*/
       top: 78%;
       left: 96%;
       margin: 0;
     }
-    .cs210:hover{
+    .scroll-img:hover{
       cursor: pointer;
     }
-    .cs22{
+    .footer-nav{
       padding: 45px 300px;
-      /*padding: 45px 100px;*/
     }
-    .cs23{
+    .footer-logo{
       width: 226px;
       height: 70px;
     }
-    .cs24{
+    .footer-icon{
       width: 42px;
       height: 42px;
     }
+
     .sub{
       width: 1280px;
       height: 201px;
-      /*position: relative;*/
       position: absolute;
       left: 50%;
       transform: translate(-50%);
-      /*top: 3000px;*/
       top: 3050px;
       z-index: 1;
       background-color: #263140;
       border-radius: 30px;
       display: flex;
       flex-direction: row;
-      justify-content: space-between; /* 추가된 부분 */
-      align-items: center; /* 수직 정렬 */
+      justify-content: space-between;
+      align-items: center;
     }
     .cs25{
       color: white;
@@ -374,7 +335,7 @@
       header, main {
         padding: 31px 100px 0 100px;
       }
-      .cs22{
+      .footer-nav{
         padding: 45px 100px;
       }
     }
@@ -383,14 +344,14 @@
       header, main {
         padding: 31px 50px 0 50px;
       }
-      .cs22{
+      .footer-nav{
         padding: 45px 50px;
       }
       .image-container{
         width: 518px;
         height: 312px;
       }
-      .cs13{
+      .main-image-box{
         width: 330px;
         height: 330px;
       }
@@ -454,62 +415,62 @@
 <header>
   <nav>
     <a><img src="images/img.png" alt="HODU 로고"></a>
-    <div class="cs0">
+    <div class="nav-aline">
       <ul>
         <li><a href="">home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Support</a></li>
       </ul>
-      <button class="bbb1"><b>Download</b></button>
+      <button class="btn btn-nav"><b>Download</b></button>
     </div>
   </nav>
-  <article class="cs3">
+  <article class="article">
     <h2 hidden="hidden">article제목</h2>
     <section>
-      <h3 class="ppp"><strong>Lorem Ipsum is simple</strong></h3>
-      <p class="fs"><strong>dummy text of the printing and</strong></p>
-      <p class="cs1">Lorem Ipsum is simply dummy text of the printing and</p>
-      <p class="cs2">typesetting industry.</p>
-      <p class="cs2">Lorem Ipsum has been the industry's standard dummy text</p>
-      <p class="cs2">ever since the 1500s, when an unknown</p>
-      <button class="bbb2"><b>Download</b></button>
+      <h3 class="font-style-48-60 padding-top200"><strong>Lorem Ipsum is simple</strong></h3>
+      <p class="font-style-48-60"><strong>dummy text of the printing and</strong></p>
+      <p class="font-style-16-20 padding-top40">Lorem Ipsum is simply dummy text of the printing and</p>
+      <p class="font-style-16-20">typesetting industry.</p>
+      <p class="font-style-16-20">Lorem Ipsum has been the industry's standard dummy text</p>
+      <p class="font-style-16-20">ever since the 1500s, when an unknown</p>
+      <button class="btn btn-header"><b>Download</b></button>
     </section>
-    <img class="cs4" src="images/img_1.png" alt="관련된 사진">
+    <img class="padding-bottom0" src="images/img_1.png" alt="관련된 사진">
   </article>
 </header>
 <main>
-  <article class="cs5">
+  <article class="article padding-top80">
     <h2 hidden="hidden">article제목</h2>
     <img class="image-container" src="images/img_2.jpeg" alt="관련된 사진">
     <section>
-      <h3 class="cs6"><strong>Lorem Ipsum is simply</strong></h3>
-      <p class="cs7"><strong>dummy text of the printing</strong></p>
-      <p class="cs7"><strong>and dummy text</strong></p>
-      <p class="cs8">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-      <p class="cs2">industry.</p>
+      <h3 class="font-style-36-45 padding-top92"><strong>Lorem Ipsum is simply</strong></h3>
+      <p class="font-style-36-45"><strong>dummy text of the printing</strong></p>
+      <p class="font-style-36-45"><strong>and dummy text</strong></p>
+      <p class="font-style-16-20 padding-top30">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+      <p class="font-style-16-20">industry.</p>
     </section>
   </article>
   <article>
-    <h2 class="cs9">dummy text of the printing and dummy</h2>
-    <p class="cs10">Lorem Ipsum is simply&nbsp;<span class="cs12">dummy text </span>&nbsp;of the printing and typesetting industry.<p>
-    <p class="cs11">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-    <ul class="cs14">
-      <li><img class="cs13" src="images/img_3.jpeg" alt=""></li>
-      <li><img class="cs13" src="images/img_4.jpeg" alt=""></li>
-      <li><img class="cs13" src="images/img_5.jpeg" alt=""></li>
+    <h2 class="content content-title">dummy text of the printing and dummy</h2>
+    <p class="content content-sub1">Lorem Ipsum is simply&nbsp;<span class="highlight">dummy text </span>&nbsp;of the printing and typesetting industry.<p>
+    <p class="content content-sub2">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+    <ul class="main-image-list list-margin88">
+      <li><img class="main-image-box" src="images/img_3.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_4.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_5.jpeg" alt=""></li>
     </ul>
-    <ul class="cs15">
-      <li><img class="cs13" src="images/img_6.jpeg" alt=""></li>
-      <li><img class="cs13" src="images/img_7.jpeg" alt=""></li>
-      <li><img class="cs13" src="images/img_8.jpeg" alt=""></li>
+    <ul class="main-image-list list-margin40">
+      <li><img class="main-image-box" src="images/img_6.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_7.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_8.jpeg" alt=""></li>
     </ul>
-    <p class="cs16"><strong>Continue exploring HODU</strong></p>
-    <button class="bbb3">Show more</button>
+    <p class="content content-sub3"><strong>Continue exploring HODU</strong></p>
+    <button class="btn btn-main">Show more</button>
   </article>
-  <hr class="cs18">
+  <hr class="line">
   <article>
-    <h2 class="cs19"><strong>Where you'll be</strong></h2>
-    <p class="cs20">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+    <h2 class="map-title"><strong>Where you'll be</strong></h2>
+    <p class="map-sub">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
     <p>지도</p>
   </article>
   <section class="sub" id="sub">
@@ -542,16 +503,15 @@
   </section>
 </main>
 <footer>
-  <img id="scroll" class="cs210" src="images/img_12.png" alt="">
-  <img class="cs21" src="images/img_2.png" alt="">
-<!--  <img class="cs210" src="img_9.png" alt="">-->
-  <nav class="cs22">
-    <a href=""><img class="cs23" src="images/img_3.png" alt=""></a>
+  <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">
+  <img class="footer-image" src="images/img_2.png" alt="">
+  <nav class="footer-nav">
+    <a href=""><img class="footer-logo" src="images/img_3.png" alt=""></a>
     <ul>
-      <li><a href=""><img class="cs24" src="images/img_4.png" alt=""></a></li>
-      <li><a href=""><img class="cs24" src="images/img_5.png" alt=""></a></li>
-      <li><a href=""><img class="cs24" src="images/img_6.png" alt=""></a></li>
-      <li><a href="https://www.naver.com"><img class="cs24" src="images/img_7.png" alt=""></a></li>
+      <li><a href=""><img class="footer-icon" src="images/img_4.png" alt=""></a></li>
+      <li><a href=""><img class="footer-icon" src="images/img_5.png" alt=""></a></li>
+      <li><a href=""><img class="footer-icon" src="images/img_6.png" alt=""></a></li>
+      <li><a href="https://www.naver.com"><img class="footer-icon" src="images/img_7.png" alt=""></a></li>
     </ul>
   </nav>
 </footer>
