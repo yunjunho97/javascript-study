@@ -45,6 +45,9 @@
       float: left;
       margin-right: 20px;
     }
+    li:last-child{
+      margin-right: 0;
+    }
     a{
       text-decoration: none;
     }
@@ -197,6 +200,9 @@
       cursor: pointer;
     }
     .footer-nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 45px 300px;
     }
     .footer-logo{
@@ -223,20 +229,20 @@
       justify-content: space-between;
       align-items: center;
     }
-    .cs25{
+    .subscribe-main{
       color: white;
       font-size: 36px;
       line-height: 45px;
       margin-left: 58px;
       margin-bottom: 18px;
     }
-    .cs26{
+    .subscribe-sub{
       color: white;
       font-size: 14px;
       line-height: 18px;
       margin-left: 58px;
     }
-    .cs27{
+    .subscribe-input{
       width: 530px;
       height: 60px;
       border-radius: 60px;
@@ -249,7 +255,7 @@
       color: #767676;
       font-size: 16px;
     }
-    .cs28{
+    .subscribe-button{
       position: absolute;
       width: 135px;
       height: 50px;
@@ -263,8 +269,8 @@
       font-size: 16px;
       border: none;
     }
-    .cs28:hover,
-    .cs28:focus {
+    .subscribe-button:hover,
+    .subscribe-button:focus {
       color: black;
       text-decoration: none;
       cursor: pointer;
@@ -359,8 +365,8 @@
       const modalSuccess = document.getElementById("modalSuccess");
       const modalFail = document.getElementById("modalFail");
       const sub = document.getElementById("sub");
-      const closeBtnSuccess = document.getElementById("close");
-      const closeBtnFail = document.getElementById("close2")
+      const closeBtnSuccess = document.getElementById("closeSuccess");
+      const closeBtnFail = document.getElementById("closeFail")
       const inputEmail = document.getElementById('email');
       const modalTextSuccess = document.getElementById('modalTextSuccess');
       const modalTextFail = document.getElementById('modalTextFail');
@@ -471,13 +477,13 @@
   <article class="sub" id="sub">
     <h2 hidden="hidden">구독 신청</h2>
     <div>
-      <p class="cs25">Subscribe to our Blog post</p>
-      <p class="cs26">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      <p class="cs26">Lorem Ipsum has been the industry's standard dummy text </p>
+      <p class="subscribe-main">Subscribe to our Blog post</p>
+      <p class="subscribe-sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p class="subscribe-sub">Lorem Ipsum has been the industry's standard dummy text </p>
     </div>
     <label for="email"></label>
-    <input id="email" class="cs27" type="email" placeholder="Enter your e-mail address">
-    <button class="cs28" id="subscribeBtn">Subscribe</button>
+    <input id="email" class="subscribe-input" type="email" placeholder="Enter your e-mail address">
+    <button class="subscribe-button" id="subscribeBtn">Subscribe</button>
   </article>
   <section class="modal" id="modalSuccess">
     <h2 hidden="hidden">구독 완료</h2>
@@ -485,7 +491,7 @@
     <p class="result-message">Thank you!</p>
     <p class="result-sub-message">Lorem Ipsum is simply dummy text of the printing industry.</p>
     <p id="modalTextSuccess"></p>
-    <button class="close" id="close">OK! I Love HODU</button>
+    <button class="close" id="closeSuccess">OK! I Love HODU</button>
   </section>
   <section class="modal" id="modalFail">
     <h2 hidden="hidden">구독 실패</h2>
@@ -493,13 +499,15 @@
     <p class="result-message">구독 실패</p>
     <p class="result-sub-message">Lorem Ipsum is simply dummy text of the printing industry.</p>
     <p id="modalTextFail"></p>
-    <button class="close" id="close2">돌아가기</button>
+    <button class="close" id="closeFail">돌아가기</button>
   </section>
+<!--  <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">-->
+<!--  <img class="footer-image" src="images/img_2.png" alt="">-->
 </main>
 <footer>
   <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">
   <img class="footer-image" src="images/img_2.png" alt="">
-  <nav class="footer-nav">
+  <div class="footer-nav">
     <a href=""><img class="footer-logo" src="images/img_3.png" alt=""></a>
     <ul>
       <li><a href=""><img class="footer-icon" src="images/img_4.png" alt=""></a></li>
@@ -507,7 +515,7 @@
       <li><a href=""><img class="footer-icon" src="images/img_6.png" alt=""></a></li>
       <li><a href="https://www.naver.com"><img class="footer-icon" src="images/img_7.png" alt=""></a></li>
     </ul>
-  </nav>
+  </div>
 </footer>
 </body>
 </html>
