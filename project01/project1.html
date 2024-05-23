@@ -56,6 +56,8 @@
       display: flex;
       align-items: center;
     }
+
+    /*버튼 관련*/
     .btn{
       width: 140px;
       height: 50px;
@@ -117,8 +119,8 @@
     }
 
     .image-container {
-      width: 660px; /* 원하는 너비 */
-      height: 390px; /* 원하는 높이 */
+      width: 660px;
+      height: 390px;
       border-radius: 30px;
     }
     .content{
@@ -280,27 +282,21 @@
       height: 400px;
       overflow: auto;
       background-image: url("images/img_10.png");
-      flex-direction: column; /* 세로 방향으로 정렬 */
-      align-items: center; /* 가로 방향 중앙 정렬 */
+      flex-direction: column;
+      align-items: center;
     }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .cs29{
+    .modalImage{
       margin-top: 60px;
       width: 110px;
       height: 112px;
     }
-    .cs30{
+    .result-message{
       margin-top: 24px;
       font-size: 36px;
       line-height: 45px;
       color: #D97652;
     }
-    .cs31{
+    .result-sub-message{
       margin-top: 12px;
       font-size: 14px;
       line-height: 18px;
@@ -316,17 +312,13 @@
       font-size: 16px;
       line-height: 20px;
     }
-    .close2{
-      margin-top: 38px;
-      width: 183px;
-      height: 50px;
-      border-radius: 40px;
-      background-color: #D97652;
-      border: none;
-      color: white;
-      font-size: 16px;
-      line-height: 20px;
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
     }
+
     /*노트북보다 큰 모니터 가정: 화면크기 7~80퍼센트로 줄이고 확인*/
     /*노트북: 100%기본화면*/
     /*태블릿: 가로로 더 줄여서 확인*/
@@ -363,38 +355,46 @@
   </style>
   <script>
     window.onload = function () {
-      let subscribeBtn = document.getElementById("subscribeBtn");
-      let modal = document.getElementById("modal");
-      let modal2 = document.getElementById("modal2");
-      let sub = document.getElementById("sub");
-      let span = document.getElementsByClassName("close")[0];
-      let span2 = document.getElementsByClassName("close2")[0];
-      let inputEmail = document.getElementById('email');
-      let modalText = document.getElementById('modalText');
-      let modalText2 = document.getElementById('modalText2');
+      const subscribeBtn = document.getElementById("subscribeBtn");
+      const modalSuccess = document.getElementById("modalSuccess");
+      const modalFail = document.getElementById("modalFail");
+      const sub = document.getElementById("sub");
+      const closeBtnSuccess = document.getElementById("close");
+      const closeBtnFail = document.getElementById("close2")
+      const inputEmail = document.getElementById('email');
+      const modalTextSuccess = document.getElementById('modalTextSuccess');
+      const modalTextFail = document.getElementById('modalTextFail');
+
+      // 이메일 형식 검사
       function validateEmail(email) {
-        let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
       }
-      subscribeBtn.onclick = function () {
-        let userEmail = inputEmail.value;
-        if(validateEmail(userEmail)){
-          modal.style.display = "flex";
-          modalText.textContent = `이메일: ${userEmail} 구독완료. 감사합니다`;
-        } else{
-          modal2.style.display = "flex";
-          modalText2.textContent = "이메일 형식이 올바르지 않습니다"
-        }
 
+      //이메일 형식 검사의 결과에 따라 성공/실패 모달창
+      subscribeBtn.onclick = function () {
+        const userEmail = inputEmail.value;
+        if(validateEmail(userEmail)){
+          modalSuccess.style.display = "flex";
+          modalTextSuccess.textContent = `이메일: ${userEmail} 구독완료. 감사합니다`;
+        } else{
+          modalFail.style.display = "flex";
+          modalTextFail.textContent = "이메일 형식이 올바르지 않습니다"
+        }
       }
-      span.onclick = function () {
-        modal.style.display = "none";
+
+      //구독성공 메시지 창 닫기
+      closeBtnSuccess.onclick = function () {
+        modalSuccess.style.display = "none";
         sub.style.display = "none";
       }
-      span2.onclick = function () {
-        modal2.style.display = "none";
+
+      //구독실패 메시지 창 닫기
+      closeBtnFail.onclick = function () {
+        modalFail.style.display = "none";
       }
 
+      //페이지 꼭대기로 이동하는 스크롤 버튼
       const scroll = document.getElementById('scroll');
 
       scroll.addEventListener('click', () => {
@@ -403,11 +403,6 @@
           behavior: 'smooth'
         });
       });
-      // window.onclick = function (event) {
-      //   if (event.target === modal) {
-      //     modal.style.display = "none";
-      //   }
-      // }
     }
   </script>
 </head>
@@ -473,33 +468,32 @@
     <p class="map-sub">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
     <p>지도</p>
   </article>
-  <section class="sub" id="sub">
+  <article class="sub" id="sub">
     <h2 hidden="hidden">구독 신청</h2>
     <div>
       <p class="cs25">Subscribe to our Blog post</p>
       <p class="cs26">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p class="cs26">Lorem Ipsum has been the industry's standard dummy text </p>
     </div>
-    <label for="email">
-      <input id="email" class="cs27" type="email" placeholder="Enter your e-mail address">
-      <button class="cs28" id="subscribeBtn">Subscribe</button>
-    </label>
-  </section>
-  <section class="modal" id="modal">
+    <label for="email"></label>
+    <input id="email" class="cs27" type="email" placeholder="Enter your e-mail address">
+    <button class="cs28" id="subscribeBtn">Subscribe</button>
+  </article>
+  <section class="modal" id="modalSuccess">
     <h2 hidden="hidden">구독 완료</h2>
-    <img class="cs29" src="images/img_11.png" alt="">
-    <p class="cs30">Thank you!</p>
-    <p class="cs31">Lorem Ipsum is simply dummy text of the printing industry.</p>
-    <p id="modalText"></p>
-    <button class="close">OK! I Love HODU</button>
+    <img class="modalImage" src="images/img_11.png" alt="">
+    <p class="result-message">Thank you!</p>
+    <p class="result-sub-message">Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <p id="modalTextSuccess"></p>
+    <button class="close" id="close">OK! I Love HODU</button>
   </section>
-  <section class="modal" id="modal2">
+  <section class="modal" id="modalFail">
     <h2 hidden="hidden">구독 실패</h2>
-    <img class="cs29" src="images/img_11.png" alt="">
-    <p class="cs30">구독 실패</p>
-    <p class="cs31">Lorem Ipsum is simply dummy text of the printing industry.</p>
-    <p id="modalText2"></p>
-    <button class="close2">돌아가기</button>
+    <img class="modalImage" src="images/img_11.png" alt="">
+    <p class="result-message">구독 실패</p>
+    <p class="result-sub-message">Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <p id="modalTextFail"></p>
+    <button class="close" id="close2">돌아가기</button>
   </section>
 </main>
 <footer>
