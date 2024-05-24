@@ -24,14 +24,14 @@
     }
     header{
       background-color: #F2E9D8;
-      padding: 31px 300px 0 300px;
+      padding: 31px 320px 0 320px;
     }
     footer{
       padding: 0;
     }
     main{
       flex-grow: 5;
-      padding: 31px 300px 0 300px;
+      padding: 31px 320px 0 320px;
     }
     nav{
       display: flex;
@@ -82,6 +82,11 @@
       margin-left: auto;
       margin-right: auto;
       display: block;
+    }
+    .btn:hover{
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .font-style-48-60{
@@ -174,6 +179,10 @@
       border-color: #C4C4C4;
       margin-top: 80px;
     }
+    .map{
+      width: 100%;
+      height: 520px;
+    }
     .map-title{
       font-size: 36px;
       line-height: 45px;
@@ -183,10 +192,12 @@
       font-size: 16px;
       line-height: 20px;
       margin-top: 20px;
+      margin-bottom: 48px;
     }
     .footer-image{
       width: 100%;
-      margin-top: 181px;
+      /*margin-top: 181px;*/
+      margin-top: 131px;
     }
     .scroll-img{
       position: sticky;
@@ -203,7 +214,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 45px 300px;
+      padding: 45px 320px;
     }
     .footer-logo{
       width: 226px;
@@ -218,9 +229,12 @@
       width: 1280px;
       height: 201px;
       position: absolute;
+      /*position: relative;*/
       left: 50%;
       transform: translate(-50%);
-      top: 3050px;
+      /*top: 3050px;*/
+      top: 3580px;
+      /*bottom: -250px;*/
       z-index: 1;
       background-color: #263140;
       border-radius: 30px;
@@ -355,7 +369,9 @@
       }
       .sub{
         width: 1100px;
-        top: 2900px;
+        /*top: 2900px;*/
+        /*top: 3230px;*/
+        top: 3400px;
       }
     }
   </style>
@@ -409,6 +425,16 @@
           behavior: 'smooth'
         });
       });
+
+      const downloadBtnNav = document.getElementById('downloadBtnNav');
+      const downloadBtnHeader = document.getElementById('downloadBtnHeader');
+
+      downloadBtnNav.addEventListener('click', () => {
+        alert("다운로드");
+      })
+      downloadBtnHeader.addEventListener('click', () => {
+        alert("다운로드");
+      })
     }
   </script>
 </head>
@@ -422,7 +448,7 @@
         <li><a href="">About</a></li>
         <li><a href="">Support</a></li>
       </ul>
-      <button class="btn btn-nav"><b>Download</b></button>
+      <button class="btn btn-nav" id="downloadBtnNav"><b>Download</b></button>
     </div>
   </nav>
   <article class="article">
@@ -434,7 +460,7 @@
       <p class="font-style-16-20">typesetting industry.</p>
       <p class="font-style-16-20">Lorem Ipsum has been the industry's standard dummy text</p>
       <p class="font-style-16-20">ever since the 1500s, when an unknown</p>
-      <button class="btn btn-header"><b>Download</b></button>
+      <button class="btn btn-header" id="downloadBtnHeader"><b>Download</b></button>
     </section>
     <img class="padding-bottom0" src="images/img_1.png" alt="관련된 사진">
   </article>
@@ -472,7 +498,9 @@
   <article>
     <h2 class="map-title"><strong>Where you'll be</strong></h2>
     <p class="map-sub">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-    <p>지도</p>
+<!--     지도를 표시할 div 입니다 -->
+    <div id="map" class="map"></div>
+
   </article>
   <article class="sub" id="sub">
     <h2 hidden="hidden">구독 신청</h2>
@@ -501,8 +529,6 @@
     <p id="modalTextFail"></p>
     <button class="close" id="closeFail">돌아가기</button>
   </section>
-<!--  <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">-->
-<!--  <img class="footer-image" src="images/img_2.png" alt="">-->
 </main>
 <footer>
   <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">
@@ -517,5 +543,17 @@
     </ul>
   </div>
 </footer>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ad10373367106444f20983952290f3c"></script>
+<script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+      level: 3 // 지도의 확대 레벨
+    };
+
+  // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+  // var map = new kakao.maps.Map(mapContainer, mapOption);
+  new kakao.maps.Map(mapContainer, mapOption);
+</script>
 </body>
 </html>
