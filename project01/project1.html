@@ -197,7 +197,6 @@
     }
     .footer-image{
       width: 100%;
-      /*margin-top: 181px;*/
       margin-top: 131px;
     }
     .scroll-img{
@@ -230,11 +229,8 @@
       width: 1280px;
       height: 201px;
       position: absolute;
-      /*position: relative;*/
       left: 50%;
       transform: translate(-50%);
-      /*top: 3050px;*/
-      /*top: 3580px;*/
       bottom: -275px;
       z-index: 1;
       background-color: #263140;
@@ -340,10 +336,6 @@
       cursor: pointer;
     }
 
-    /*노트북보다 큰 모니터 가정: 화면크기 7~80퍼센트로 줄이고 확인*/
-    /*노트북: 100%기본화면*/
-    /*태블릿: 가로로 더 줄여서 확인*/
-    /*1500*/
     @media (max-width: 1650px) {
       header, main {
         padding: 31px 100px 0 100px;
@@ -352,7 +344,7 @@
         padding: 45px 100px;
       }
     }
-    /*태블릿 100% 화면*/
+
     @media (max-width: 1350px) {
       header, main {
         padding: 31px 50px 0 50px;
@@ -370,9 +362,6 @@
       }
       .sub{
         width: 1100px;
-        /*top: 2900px;*/
-        /*top: 3230px;*/
-        /*top: 3400px;*/
       }
     }
   </style>
@@ -442,7 +431,7 @@
 <body>
 <header>
   <nav>
-    <a><img src="images/img.png" alt="HODU 로고"></a>
+    <a href=""><img src="images/img.png" alt="HODU 로고 홈페이지로 이동"></a>
     <div class="nav-aline">
       <ul>
         <li><a href="">home</a></li>
@@ -463,13 +452,13 @@
       <p class="font-style-16-20">ever since the 1500s, when an unknown</p>
       <button class="btn btn-header" id="downloadBtnHeader"><b>Download</b></button>
     </section>
-    <img class="padding-bottom0" src="images/img_1.png" alt="관련된 사진">
+    <img class="padding-bottom0" src="images/img_1.png" alt="내용과 관련된 사진">
   </article>
 </header>
 <main>
   <article class="article padding-top80">
     <h2 hidden="hidden">article제목</h2>
-    <img class="image-container" src="images/img_2.jpeg" alt="관련된 사진">
+    <img class="image-container" src="images/img_2.jpeg" alt="내용과 관련된 사진">
     <section>
       <h3 class="font-style-36-45 padding-top92"><strong>Lorem Ipsum is simply</strong></h3>
       <p class="font-style-36-45"><strong>dummy text of the printing</strong></p>
@@ -478,19 +467,19 @@
       <p class="font-style-16-20">industry.</p>
     </section>
   </article>
-  <article id="id777">
+  <article>
     <h2 class="content content-title">dummy text of the printing and dummy</h2>
     <p class="content content-sub1">Lorem Ipsum is simply&nbsp;<span class="highlight">dummy text </span>&nbsp;of the printing and typesetting industry.<p>
     <p class="content content-sub2">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
     <ul class="main-image-list list-margin88">
-      <li><img class="main-image-box" src="images/img_3.jpeg" alt=""></li>
-      <li><img class="main-image-box" src="images/img_4.jpeg" alt=""></li>
-      <li><img class="main-image-box" src="images/img_5.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_3.jpeg" alt="고양이1"></li>
+      <li><img class="main-image-box" src="images/img_4.jpeg" alt="고양이2"></li>
+      <li><img class="main-image-box" src="images/img_5.jpeg" alt="고양이3"></li>
     </ul>
     <ul class="main-image-list list-margin40">
-      <li><img class="main-image-box" src="images/img_6.jpeg" alt=""></li>
-      <li><img class="main-image-box" src="images/img_7.jpeg" alt=""></li>
-      <li><img class="main-image-box" src="images/img_8.jpeg" alt=""></li>
+      <li><img class="main-image-box" src="images/img_6.jpeg" alt="고양이4"></li>
+      <li><img class="main-image-box" src="images/img_7.jpeg" alt="고양이5"></li>
+      <li><img class="main-image-box" src="images/img_8.jpeg" alt="고양이6"></li>
     </ul>
     <p class="content content-sub3" id="list-pic"><strong>Continue exploring HODU</strong></p>
     <button class="btn btn-main" id="show-more">Show more</button>
@@ -499,9 +488,7 @@
   <article>
     <h2 class="map-title"><strong>Where you'll be</strong></h2>
     <p class="map-sub">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-<!--     지도를 표시할 div 입니다 -->
     <div id="map" class="map"></div>
-
   </article>
   <article class="sub" id="sub">
     <h2 hidden="hidden">구독 신청</h2>
@@ -532,32 +519,29 @@
   </section>
 </main>
 <footer>
-  <img id="scroll" class="scroll-img" src="images/img_12.png" alt="">
+  <img id="scroll" class="scroll-img" src="images/img_12.png" alt="페이지 맨 위로 올라가기">
   <img class="footer-image" src="images/img_2.png" alt="">
   <div class="footer-nav">
-    <a href=""><img class="footer-logo" src="images/img_3.png" alt=""></a>
+    <a href=""><img class="footer-logo" src="images/img_3.png" alt="HODU 홈페이지로 이동"></a>
     <ul>
-      <li><a href=""><img class="footer-icon" src="images/img_4.png" alt=""></a></li>
-      <li><a href=""><img class="footer-icon" src="images/img_5.png" alt=""></a></li>
-      <li><a href=""><img class="footer-icon" src="images/img_6.png" alt=""></a></li>
-      <li><a href="https://www.naver.com"><img class="footer-icon" src="images/img_7.png" alt=""></a></li>
+      <li><a href=""><img class="footer-icon" src="images/img_4.png" alt="블로그로 이동"></a></li>
+      <li><a href="https://www.instagram.com"><img class="footer-icon" src="images/img_5.png" alt="인스타그램으로 이동"></a></li>
+      <li><a href="https://www.facebook.com"><img class="footer-icon" src="images/img_6.png" alt="페이스북으로 이동"></a></li>
+      <li><a href="https://www.naver.com"><img class="footer-icon" src="images/img_7.png" alt="유튜브로 이동"></a></li>
     </ul>
   </div>
 </footer>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ad10373367106444f20983952290f3c"></script>
 <script>
-  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+  var mapContainer = document.getElementById('map'),
     mapOption = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-      level: 3 // 지도의 확대 레벨
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      level: 3
     };
 
-  // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-  // var map = new kakao.maps.Map(mapContainer, mapOption);
   new kakao.maps.Map(mapContainer, mapOption);
 
   const listPic = document.querySelector('#list-pic'); //ul
-  const listli = document.querySelector('#id777 > ul:last-child');
   const btn = document.querySelector('#show-more');
   let pageToPatch = 1;
 
